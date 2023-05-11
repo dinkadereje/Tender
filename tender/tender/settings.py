@@ -30,17 +30,36 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
-INSTALLED_APPS = [
+INSTALLED_APPS = [ 
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    'drf_yasg',
     'django.contrib.staticfiles',
     'tinymce',
     'app',
     'phonenumber_field',
+    'drf_spectacular',
+    'rest_framework',
+    'drf_generators',
 ]
+REST_FRAMEWORK = {
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE': 15
+}
+SPECTACULAR_SETTINGS = {
+    'TITLE': 'TODO List API',
+    'DESCRIPTION': 'API documentation for our app',
+    'VERSION': '1.0.0',
+    'SERVE_INCLUDE_SCHEMA': False,
+    'COMPONENT_SPLIT_REQUEST': True
+    # OTHER SETTINGS
+}
+SWAGGER_SETTINGS = {
+   'DEFAULT_INFO': './urls.py.a',
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
