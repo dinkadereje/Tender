@@ -1,4 +1,4 @@
-#!/Users/apple/Documents/Project/Tender/render/bin/python
+#!/Users/apple/Documents/Project/Tender/render/bin/python3
 # -*- coding: utf-8 -*-
 import re
 import sys
